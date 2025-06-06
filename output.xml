@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.12 on darwin)" generated="2025-06-06T16:52:11.726567" rpa="false" schemaversion="5">
+<suite id="s1" name="Transition To The UFC Page" source="/Users/timursultanov/Desktop/championat.com/tests/championat.com/Transition_To_The_UFC_Page.robot">
+<test id="s1-t1" name="Hover And Click UFC section" line="7">
+<kw name="Precondition: Open Browser And Maximize" owner="web" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-06T16:52:12.048444" level="INFO">Opening browser 'chrome' to base url 'https://www.championat.com'.</msg>
+<arg>url=${site_url}</arg>
+<arg>browser=${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-06T16:52:12.047830" elapsed="7.667816"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-06T16:52:19.717896" elapsed="0.389599"/>
+</kw>
+<arg>site_url=https://www.championat.com</arg>
+<arg>browser=chrome</arg>
+<doc>Browser is opened in full screen</doc>
+<status status="PASS" start="2025-06-06T16:52:12.046806" elapsed="8.061026"/>
+</kw>
+<kw name="Hover And Click UFC section" owner="championat_com">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-06T16:52:25.110867" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-06T16:52:20.109659" elapsed="5.002229"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MENU_SELECTOR}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-06T16:52:25.112346" elapsed="0.058652"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2025-06-06T16:52:25.171820" level="INFO">Simulating Mouse Over on element 'xpath://a[contains(@href, '/boxing/') and contains(text(), 'Бокс/ММА')]'.</msg>
+<arg>${MENU_SELECTOR}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2025-06-06T16:52:25.171360" elapsed="0.285975"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-06T16:52:35.459913" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-06T16:52:25.458029" elapsed="10.002636"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SUBMENU_ITEM}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-06T16:52:35.461328" elapsed="0.027475"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-06T16:52:35.489670" level="INFO">Clicking element 'xpath://a[contains(text(), 'UFC')]'.</msg>
+<arg>${SUBMENU_ITEM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-06T16:52:35.489210" elapsed="1.034350"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-06T16:52:46.524970" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-06T16:52:36.523871" elapsed="10.001795"/>
+</kw>
+<doc>Hover The Mouse Over 'БОКС/ММА' Section And Click The UFC Section</doc>
+<status status="PASS" start="2025-06-06T16:52:20.108862" elapsed="26.417291"/>
+</kw>
+<kw name="Postcondition: Close Browser" owner="web" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-06T16:52:46.528688" elapsed="0.251463"/>
+</kw>
+<doc>Postcondition: Browser is closed</doc>
+<status status="PASS" start="2025-06-06T16:52:46.527660" elapsed="0.252738"/>
+</kw>
+<doc>Hover The Mouse Over 'БОКС/ММА' Section And Click The UFC Section</doc>
+<timeout value="1 minute"/>
+<status status="PASS" start="2025-06-06T16:52:12.046065" elapsed="34.734710"/>
+</test>
+<status status="PASS" start="2025-06-06T16:52:11.733203" elapsed="35.049921"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Transition To The UFC Page">Transition To The UFC Page</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
